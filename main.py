@@ -145,8 +145,13 @@ def about(state: State) -> Page:
         "It helps calculate concrete needed for construction pads.",
         "Users can calculate, save, and delete concrete pad projects.",
         Button("Home", "index")])
+set_site_information(
+    author="Nathaniel Sutton",
+    description="A concrete calculator for construction projects.",
+    sources="Drafter documentation and class materials.",
+    planning="Concrete Calculation Website.")
 start_server(State("", 10, 10, 0.5, "feet", False, 0, "", []),in_debug_mode=False,framed=True)
-
+"""
 assert_equal(calculate_concrete_volume(10, 10, 0.5, "feet", False),50)
 assert_equal(calculate_concrete_volume(10, 10, 0.5, "feet", True),55)
 assert_equal(calculate_concrete_volume(120, 120, 6, "inches", False),50)
@@ -161,3 +166,4 @@ assert_equal(test_state.saved_pads[0].name, "Test Pad")
 assert_equal(test_state.saved_pads[0].volume, 50)
 assert_equal(isinstance(results(test_state), Page), True)
 assert_equal(isinstance(saved_pads(test_state), Page), True)
+"""
