@@ -149,9 +149,15 @@ set_site_information(
     author="Nathaniel Sutton",
     description="A concrete calculator for construction projects.",
     sources="Drafter documentation and class materials.",
-    planning="Concrete Calculation Website.")
+    planning="Computer Science Project.",
     links=[]
-start_server(State("", 10, 10, 0.5, "feet", False, 0, "", []),in_debug_mode=False,framed=True)
+)
+
+start_server(
+    State("", 10, 10, 0.5, "feet", False, 0, "", []),
+    in_debug_mode=False,
+    framed=True
+)
 """
 assert_equal(calculate_concrete_volume(10, 10, 0.5, "feet", False),50)
 assert_equal(calculate_concrete_volume(10, 10, 0.5, "feet", True),55)
